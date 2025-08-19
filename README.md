@@ -21,3 +21,13 @@ See `requirements.txt` for dependencies.
 
 ## For Recruiters
 This repo is a technical demonstration for the Palantir Data Scientist position (Prod Support, Gen-AI, Data Science, RCA, Defect Triaging, Refactoring).
+
+# Project Architecture (Mermaid)
+
+```mermaid
+graph TD
+    A[Data Input] --> B[GenAI Pipeline]
+    B --> C[Defect Triager]
+    C --> D[Refactor Utils]
+    D --> E[Production Accuracy Report]
+```
