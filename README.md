@@ -22,6 +22,48 @@ See `requirements.txt` for dependencies.
 ## For Recruiters
 This repo is a technical demonstration for the Palantir Data Scientist position (Prod Support, Gen-AI, Data Science, RCA, Defect Triaging, Refactoring).
 
+# Running Tests
+
+To run all unit tests and verify the pipeline modules:
+
+```bash
+# (Optional) Activate your virtual environment
+source .venv/bin/activate
+
+# Run all tests
+python -m unittest discover -s tests
+```
+
+You should see output like:
+
+```
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+```
+
+# Running the Pipeline
+
+To run the main data pipeline and see example outputs:
+
+```bash
+# (Optional) Activate your virtual environment
+source .venv/bin/activate
+
+# Run the pipeline using the module command
+python -m src.data_pipeline
+```
+
+You should see output similar to:
+
+```
+GenAI Insights: ['Insight for: Defect: Missing HER2 status for breast cancer patient 100301', ...]
+Defect Triage: ['Triaged: Defect: Missing HER2 status for breast cancer patient 100301', ...]
+Code Quality Report: Checked code quality for src/data_pipeline.py
+```
+
 # Project Architecture (Mermaid)
 
 ```mermaid
